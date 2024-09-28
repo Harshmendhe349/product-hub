@@ -7,7 +7,7 @@ const CategorySelect = ({ selectedCategory, setSelectedCategory }) => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/categories');
+                const response = await axios.get('https://product-hub-u28q.onrender.com/api/categories');
                 setCategories(response.data); // Assuming the API returns an array of categories
             } catch (error) {
                 console.error('Error fetching categories:', error);
