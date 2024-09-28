@@ -54,7 +54,6 @@ app.get('/api/categories', async (req, res) => {
         // Fetch categories from the DummyJSON API
         const response = await axios.get('https://dummyjson.com/products/categories');
         res.json(response.data);
-        console.log(response.data);
     } catch (error) {
         console.error('Error fetching categories:', error);
         res.status(500).json({ message: 'Error fetching categories' });
